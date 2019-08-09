@@ -1,5 +1,5 @@
 FROM ruby:2.5
-MAINTAINER David Silveira <david.silveira@codeminer42.com>
+MAINTAINER Dean Perry <dean@deanpcmad.com>
 
 # Add Google Chrome PPA
 RUN curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
@@ -59,5 +59,9 @@ RUN curl -sSLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux
     rm -f "node-v$NODE_VERSION-linux-x64.tar.xz" && \
     npm install npm -g
 
+RUN gem update --system && gem install bundler
+
 # Encoding
 ENV LANG C.UTF-8
+
+ENV RAILS_ENV test
