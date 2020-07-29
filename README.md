@@ -3,7 +3,7 @@
 Docker Ruby images used with Drone CI.
 
 These are forked from [Codeminer42/docker-ci-ruby](htttps://github.com/Codeminer42/docker-ci-ruby)
-and modified to update bundler and install `libsodium-dev`
+and modified to update bundler and install `libsodium-dev` and `mariadb-client`
 
 ## Dependencies
 

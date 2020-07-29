@@ -22,7 +22,7 @@ RUN apt-get -yqq update && \
       unzip \
       fonts-ipafont-gothic xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic \
       xauth \
-      libssl-dev libsodium-dev && \
+      libssl-dev libsodium-dev mariadb-client && \
     rm -rf /var/lib/apt/lists/*
 
 # Install Chrome WebDriver
