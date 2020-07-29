@@ -1,5 +1,5 @@
 FROM ruby:2.7
-MAINTAINER Codeminer42 <contact@codeminer42.com>
+MAINTAINER Dean Perry <dean@deanpcmad.com>
 
 # Add Google Chrome PPA
 RUN curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
@@ -63,3 +63,5 @@ RUN gem update --system && gem install bundler
 
 # Encoding
 ENV LANG C.UTF-8
+
+ENV RAILS_ENV test

@@ -16,7 +16,7 @@ The following dependencies are being installed on all images:
 
 ### Ruby images
 
-- `2.7`, `latest` [Dockerfile](https://github.com/deanpcmad/docker-ci-ruby/blob/master/2.7/Dockerfile)
+- `2.7` [Dockerfile](https://github.com/deanpcmad/docker-ci-ruby/blob/master/2.7/Dockerfile)
 - `2.6` [Dockerfile](https://github.com/deanpcmad/docker-ci-ruby/blob/master/2.6/Dockerfile)
 - `2.5` [Dockerfile](https://github.com/deanpcmad/docker-ci-ruby/blob/master/2.5/Dockerfile)
 
