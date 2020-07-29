@@ -1,5 +1,5 @@
-FROM ruby:2.5
-MAINTAINER Dean Perry <dean@deanpcmad.com>
+FROM ruby:2.7
+MAINTAINER Codeminer42 <contact@codeminer42.com>
 
 # Add Google Chrome PPA
 RUN curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
@@ -52,7 +52,7 @@ RUN curl -sSLO "https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-$PHANT
 
 # Install node / npm
 ENV NPM_CONFIG_LOGLEVEL info
-ENV NODE_VERSION 8.17.0
+ENV NODE_VERSION 12.16.1
 
 RUN curl -sSLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.xz" && \
     tar -xJf "node-v$NODE_VERSION-linux-x64.tar.xz" -C /usr/local --strip-components=1 && \
@@ -63,5 +63,3 @@ RUN gem update --system && gem install bundler
 
 # Encoding
 ENV LANG C.UTF-8
-
-ENV RAILS_ENV test

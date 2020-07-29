@@ -22,7 +22,7 @@ RUN apt-get -yqq update && \
       unzip \
       fonts-ipafont-gothic xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic \
       xauth \
-      libssl-dev && \
+      libssl-dev libsodium-dev && \
     rm -rf /var/lib/apt/lists/*
 
 # Install Chrome WebDriver
@@ -52,7 +52,7 @@ RUN curl -sSLO "https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-$PHANT
 
 # Install node / npm
 ENV NPM_CONFIG_LOGLEVEL info
-ENV NODE_VERSION 8.11.1
+ENV NODE_VERSION 12.16.1
 
 RUN curl -sSLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.xz" && \
     tar -xJf "node-v$NODE_VERSION-linux-x64.tar.xz" -C /usr/local --strip-components=1 && \
